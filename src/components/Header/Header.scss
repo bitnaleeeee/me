@@ -1,0 +1,33 @@
+.header {
+    width: 100%;
+  
+    .inner {
+        margin: 0 auto;
+        border-bottom: 1px solid #ececec;
+        padding: 15px 30px;
+        max-width: -webkit-calc(890px - (30px * 2));
+  
+        .mode {
+            float: left;
+            border: none;
+            padding: 10px 10px;
+            background: #ccc;
+        }
+  
+        .nav {
+            float: right;
+  
+            &>a {
+                display: inline-block;
+                margin-left: 5px;
+                padding: 5px 10px;
+            }
+        }
+  
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+  }

@@ -1,12 +1,16 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./pages/Main/Main";
+import Home from "./pages/Home/Home";
+import Archive from "./pages/Archive/Archive";
+import About from "./pages/About/About";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Archive" element={<Archive />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
