@@ -1,9 +1,219 @@
 .author {
     .avatar {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 1rem;
         border-radius: 50%;
-        width: 70px;
-        height: 70px;
+        width: 5rem;
+        height: 5rem;
     }
-  }
+
+    .info {
+        margin-top: 1rem;
+        text-align: center;
+        opacity: 0.8;
+
+        a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ED812E;
+        }
+    }
+}
+
+.skill {
+    &>dl {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 3rem;
+        width: 45%;
+        text-align: center;
+
+        dt {
+            position: relative;
+            font-weight: bold;
+        }
+
+        &:nth-child(2n) {
+            padding-left: 10%;
+        }
+    }
+
+    &>dl dt {
+        &:before {
+            content: '';
+            position: relative;
+            top: 0.1rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &>dl:nth-child(1) dt:before {
+        background-color: #f14a29;
+    }
+
+    &>dl:nth-child(2) dt:before {
+        background-color: #0096dc;
+    }
+
+    &>dl:nth-child(3) dt:before {
+        background-color: #f0db4f;
+    }
+
+    &>dl:nth-child(4) dt:before {
+        background-color: #61dbfb;
+    }
+
+    &>dl:nth-child(5) dt:before {
+        background-color: #0868ac;
+    }
+
+    &>dl:nth-child(6) dt:before {
+        background-color: #3f2c00;
+    }
+}
+
+
+.post {
+    .post-list {
+        &>li {
+            border-bottom: 0.1rem dashed #e7e7e7;
+            padding: 2rem 0;
+
+            .top {
+                .title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+
+                .date {
+                    margin-left: 0.5rem;
+                    color: #999;
+                }
+            }
+
+            .bottom {
+                margin-top: 0.5rem;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.project {
+    font-size: 0;
+
+    &>dl {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2rem;
+        width: 45%;
+        text-align: left;
+
+        &:nth-child(2n) {
+            padding-left: 10%;
+        }
+
+        dt {
+            position: relative;
+            font-weight: bold;
+            font-size: 1rem;
+
+            img {
+                display: block;
+                margin: 0 auto 2rem;
+                height: 3rem;
+            }
+        }
+
+        .title {
+            display: inline-block;
+            line-height: 1.5;
+        }
+
+        .date {
+            font-size: 0.8rem;
+            font-weight: normal;
+            opacity: 0.8;
+        }
+
+        .info {
+            margin-top: 1rem;
+        }
+
+        .service {
+            font-size: 0.8rem;
+
+            dt {
+                color: #0d122b;
+            }
+
+            dd {
+                position: relative;
+                padding-left: 0.5rem;
+
+                &::before {
+                    content: '·';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        .skill {
+            dt {
+                color: #0d122b;
+            }
+
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .link {
+            font-size: 0;
+
+            a {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: #ED812E;
+
+                &::after {
+                    content: '';
+                    position: relative;
+                    top: 0.1rem;
+                    display: inline-block;
+                    margin: 0 0.5rem;
+                    width: 1px;
+                    height: 0.8rem;
+                    background-color: #ccc;
+                }
+
+                &:last-child::after {
+                    display: none;
+                }
+
+                &.waiting {
+                    pointer-events: none;
+                    color: #ccc;
+                }
+            }
+        }
+
+        .img {
+            margin-top: 1rem;
+            border: 1px solid #e0e0e0;
+
+            &>img {
+                width: 100%;
+            }
+        }
+    }
+}

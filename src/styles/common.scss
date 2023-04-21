@@ -1,7 +1,35 @@
 .wrapper {
     .content {
-        margin: 0 auto;
-        padding: 20px;
+        position: relative;
+        margin: 10rem auto 0;
+        padding: 2rem 2rem 10rem;
         max-width: 800px;
+  
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e0e0e0;
+            width: 2rem;
+            height: 0.2rem;
+        }
+  
+        &>.inner {
+            margin-top: 2rem;
+        }
+  
+        h2.title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #0d122b;
+  
+            &>span {
+                color: #ccc;
+            }
+        }
+  
     }
   }

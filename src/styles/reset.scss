@@ -24,7 +24,15 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	min-height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+	box-sizing: border-box;
+	font-family: Roboto, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	line-height: 1.6;
+	color: #434648;
 }
 ol, ul {
 	list-style: none;
@@ -40,4 +48,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+    color: #0d122b;
 }
