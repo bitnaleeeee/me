@@ -123,7 +123,7 @@ const Home = () => {
 
         <article className="content">
           <h2 className="title">
-            Project
+            Pro<span>ject</span>
           </h2>
           <div className="inner project">
             <dl>
@@ -141,19 +141,19 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://bitnaleeeee.github.io/medical-search/"
+                    to="https://bitnaleeeee.github.io/medical-search/"
                     target="_blank"
                   >
                     배포 링크
                   </Link>
                   <Link
-                    href="https://bitnaleeeee.github.io/back-end-build/"
+                    to="https://bitnaleeeee.github.io/back-end-build/"
                     target="_blank"
                   >
                     관련 포스팅
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/medical-search"
+                    to="https://github.com/bitnaleeeee/medical-search"
                     target="_blank"
                   >
                     GitHub
@@ -217,13 +217,13 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://bitnaleeeee.github.io/wanted-task/"
+                    to="https://bitnaleeeee.github.io/wanted-task/"
                     target="_blank"
                   >
                     배포 링크
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/wanted-task"
+                    to="https://github.com/bitnaleeeee/wanted-task"
                     target="_blank"
                   >
                     GitHub
@@ -280,19 +280,19 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://www.youtube.com/watch?v=DWaKFjUI7Ew"
+                    to="https://www.youtube.com/watch?v=DWaKFjUI7Ew"
                     target="_blank"
                   >
                     배포 영상
                   </Link>
                   <Link
-                    href="https://bitnaleeeee.github.io/2022/09/08/2%EC%B0%A8%20project%20%ED%9A%8C%EA%B3%A0/"
+                    to="https://bitnaleeeee.github.io/2022/09/08/2%EC%B0%A8%20project%20%ED%9A%8C%EA%B3%A0/"
                     target="_blank"
                   >
                     회고록
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/36-2nd-WeNB-frontend"
+                    to="https://github.com/bitnaleeeee/36-2nd-WeNB-frontend"
                     target="_blank"
                   >
                     GitHub
@@ -350,19 +350,19 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://www.youtube.com/watch?v=n2kL24FnHsE"
+                    to="https://www.youtube.com/watch?v=n2kL24FnHsE"
                     target="_blank"
                   >
                     배포 영상
                   </Link>
                   <Link
-                    href="https://bitnaleeeee.github.io/2022/08/27/1%EC%B0%A8%20project%20%ED%9A%8C%EA%B3%A0/"
+                    to="https://bitnaleeeee.github.io/2022/08/27/1%EC%B0%A8%20project%20%ED%9A%8C%EA%B3%A0/"
                     target="_blank"
                   >
                     회고록
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/36-1st-Usopp-frontend"
+                    to="https://github.com/bitnaleeeee/36-1st-Usopp-frontend"
                     target="_blank"
                   >
                     GitHub
@@ -423,13 +423,13 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://2nd-assignment.vercel.app/"
+                    to="https://2nd-assignment.vercel.app/"
                     target="_blank"
                   >
                     배포 링크
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/angular-cli-issue-list"
+                    to="https://github.com/bitnaleeeee/angular-cli-issue-list"
                     target="_blank"
                   >
                     GitHub
@@ -482,13 +482,13 @@ const Home = () => {
               <dd>
                 <div className="link">
                   <Link
-                    href="https://3rd-assignment.vercel.app/"
+                    to="https://3rd-assignment.vercel.app/"
                     target="_blank"
                   >
                     배포 링크
                   </Link>
                   <Link
-                    href="https://github.com/bitnaleeeee/car-rental-service"
+                    to="https://github.com/bitnaleeeee/car-rental-service"
                     target="_blank"
                   >
                     GitHub
@@ -535,14 +535,73 @@ const Home = () => {
         </article>
 
         <article className="content">
-          <h2 className="title">Recent Posts</h2>
+          <h2 className="title"><span>Time</span>line</h2>
+          <div className="inner timeline">
+            <dl>
+              <dt>
+                <img src={process.env.PUBLIC_URL + '/images/logo-onboarding.png'} alt="onboarding logo" />
+              </dt>
+              <dd>
+                <div className="date">2022.10 - 2022.11</div>
+                <strong className="title">원티드 프론트엔드 코스<br />(Pre-onboarding)</strong>
+                <p className="text">원티드에서 주관하는 프론트엔드 코스로써 여러 IT기업의 실무 과제로 이루어졌으며 실무자/취준생 등 여러 팀원들과 같이 다양한 프로젝트를 진행하였습니다.</p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img src={process.env.PUBLIC_URL + '/images/logo-weggle.png'} alt="weggle logo" />
+              </dt>
+              <dd>
+                <div className="date">2022.09 - 2022.10</div>
+                <strong className="title">위글 기업 인턴십</strong>
+                <p className="text">부트캠프 기업 협업 인턴쉽으로 숏폼커머스 플랫폼 위글에서 백 오피스 프로젝트를 진행하면서 실무 로직 및 가이드를 경험하였습니다.</p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img src={process.env.PUBLIC_URL + '/images/logo-wecode.png'} alt="wecode logo" />
+              </dt>
+              <dd>
+                <div className="date">2022.06 ~ 2022.10</div>
+                <strong className="title">위코드 부트캠프</strong>
+                <p className="text">프론트엔드 개발자로 나아가고 다양한 프로젝트를 경험하기 위해 위코드 부트캠프를 수료하였습니다. 웹에 대한 폭넓은 학습 및 알고리즘을 학습했으며, 프론트/서버 개발자와 다양한 프로젝트를 진행하면서 많은 경험을 쌓았습니다.</p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img src={process.env.PUBLIC_URL + '/images/logo-codeit.png'} alt="codeit logo" />
+              </dt>
+              <dd>
+                <div className="date">2022.03 ~ 2022.06</div>
+                <strong className="title">코드잇 프론트엔드 과정</strong>
+                <p className="text">웹 개발을 본격적으로 알아가기 위해 생활코딩 강의를 시작으로 HTML, CSS, JavaScript를 학습하였으며 체계적으로 배우기위해 코드잇 프론트엔드 과정을 3개월 수강하였습니다. 단순히 학습하는것이 아닌 여러가지 UI를 구축해보면서 개발의 매력에 더욱 빠지게 되었습니다.<br /><a href="https://codepen.io/bitnaleeeee/" target="_blank" className="link">UI 보러가기</a>
+                </p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img src={process.env.PUBLIC_URL + '/images/logo-yogiyo.png'} alt="yogiyo logo" />
+              </dt>
+              <dd>
+                <div className="date">2018.02 ~ 2022.02</div>
+                <strong className="title">위대한상상<span className="dot">·</span>경희대학교<span className="dot">·</span>화성고등학교</strong>
+                <p className="text">인사, HRD 업무 담당하였으며 위대한상상 IT부서에서 일하면서 웹 개발에 대한 큰 관심이 생겼고 이때부터 개발자의 커리어 전환에 도전하게 되었습니다.</p>
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+
+
+        <article className="content">
+          <h2 className="title"><span>Recent</span> Posts</h2>
           <div className="inner post">
             <ul className="post-list">
               {post &&
                 post.map((item, idx) => {
                   return (
                     <li key={idx}>
-                      <Link className="link" href={item.link} target="_blank">
+                      <Link className="link" to={item.link} target="_blank">
                         <div className="top">
                           <strong className="title">{item.title}</strong>
                           <span className="date">{item.date}</span>

@@ -217,3 +217,97 @@
         }
     }
 }
+
+
+.timeline {
+    &>dl {
+        position: relative;
+        margin-top: 1.5rem;
+        height: 12rem;
+
+        dt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            width: 7rem;
+            height: 7rem;
+            background-color: #ececec;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+                padding: 1rem;
+                width: 100%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 1rem;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+                border-left: 0.5rem dotted #ececec;
+                height: 15rem;
+            }
+        }
+
+        dd {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 37%;
+            text-align: left;
+
+            .date {
+                font-size: 0.8rem;
+                opacity: 0.8;
+            }
+
+            .title {
+                display: inline-block;
+                line-height: 1.5;
+
+                .dot {
+                    margin: 0 0.1rem;
+                    opacity: 0.5;
+                }
+            }
+
+            .text {
+                font-size: 0.8rem;
+            }
+
+            .link {
+                position: relative;
+                display: inline-block;
+                margin-top: 0.5rem;
+                z-index: 1;
+                text-decoration: none;
+                color: #ED812E;
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    &>dl:nth-child(2n) dd {
+        left: auto;
+        right: 0;
+        text-align: right;
+    }
+
+    &>dl:last-child dt:before {
+        display: none;
+    }
+}
