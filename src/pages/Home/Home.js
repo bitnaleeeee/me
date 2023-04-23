@@ -50,7 +50,7 @@ const Home = () => {
         <article className="content">
           <div className="inner author">
             <img
-              src="./images/avatar.jpg"
+              src={process.env.PUBLIC_URL + '/images/avatar.jpg'}
               alt=""
               className="avatar"
             />
@@ -129,7 +129,7 @@ const Home = () => {
             <dl>
               <dt>
                 <img
-                  src="./images/logo-onboarding.png"
+                  src={process.env.PUBLIC_URL + '/images/logo-onboarding.png'}
                   alt="onboarding logo"
                 />
                 <div className="title">
@@ -161,7 +161,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/project-search.gif"
+                    src={process.env.PUBLIC_URL + '/images/project-search.gif'}
                     alt="실시간 검색창 영상"
                   />
                 </div>
@@ -208,7 +208,7 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src="./images/logo-wanted.png" alt="wanted logo" />
+                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
                 <div className="title">
                   로그인 / 회원가입, TodoList 추가, 수정, 삭제 기능 구현
                 </div>
@@ -231,7 +231,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/project-todo.gif"
+                    src={process.env.PUBLIC_URL + '/images/project-todo.gif'}
                     alt="원티드 프론트엔드코스 사전과제 영상"
                   />
                 </div>
@@ -272,7 +272,7 @@ const Home = () => {
 
             <dl>
               <dt>
-                <img src="./images/logo-airbnb.png" alt="airbnb logo" />
+                <img src={process.env.PUBLIC_URL + '/images/logo-airbnb.png'} alt="airbnb logo" />
                 <div className="title">Airbnb를 모티브로한 팀 프로젝트</div>
                 <div className="date">2022.08.29 ~ 2022.09.08</div>
                 <div className="date">주관 : 위코드 부트캠프</div>
@@ -300,7 +300,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/project-wenb.gif"
+                    src={process.env.PUBLIC_URL + '/images/project-wenb.gif'}
                     alt="wenb 프로젝트 영상"
                   />
                 </div>
@@ -342,7 +342,7 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src="./images/logo-aesop.png" alt="aesop logo" />
+                <img src={process.env.PUBLIC_URL + '/images/logo-aesop.png'} alt="aesop logo" />
                 <div className="title">Aesop을 모티브로한 팀 프로젝트</div>
                 <div className="date">2022.08.12 ~ 2022.8.26</div>
                 <div className="date">주관 : 위코드 부트캠프</div>
@@ -370,7 +370,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/project-usopp.gif"
+                    src={process.env.PUBLIC_URL + '/images/project-usopp.gif'}
                     alt="우솝 프로젝트 영상"
                   />
                 </div>
@@ -414,7 +414,7 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src="./images/logo-wanted.png" alt="wanted logo" />
+                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
                 <div className="title">
                   깃 레포 이슈 목록과 상세 내용을 확인하는 웹 사이트 구축
                 </div>
@@ -437,7 +437,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/project-issue.gif"
+                    src={process.env.PUBLIC_URL + '/images/project-issue.gif'}
                     alt="원티드 프론트엔드코스 기업협업 과제"
                   />
                 </div>
@@ -475,7 +475,7 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src="./images/logo-wanted.png" alt="wanted logo" />
+                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
                 <div className="title">B2C 차량대여 서비스 모바일 웹 제작</div>
                 <div className="date">2022.11.01 ~ 2022.11.03</div>
               </dt>
@@ -496,7 +496,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src="./images/carrentalservice.gif"
+                    src={process.env.PUBLIC_URL + '/images/carrentalservice.gif'}
                     alt="원티드 프론트엔드코스 기업협업 과제"
                   />
                 </div>

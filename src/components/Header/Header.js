@@ -10,10 +10,10 @@ const Header = () => {
           on
         </button>
         <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/Archive">Archive</Link>
-          <Link to="/About">About</Link>
-          <Link to="/">
+          <Link to="/me">Home</Link>
+          <Link to="/me/Archive">Archive</Link>
+          <Link to="/me/About">About</Link>
+          <Link to="/me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
