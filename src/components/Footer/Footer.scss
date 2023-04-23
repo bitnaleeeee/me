@@ -1,0 +1,28 @@
+
+
+.footer {
+  
+    .inner {
+        margin: 0 auto;
+        padding: 10rem 1rem;
+        max-width: -webkit-calc(890px - (1rem * 2));
+        text-align: center;
+  
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+  
+        .link {
+            a {
+                display: inline-block;
+                margin: 0 1rem;
+            }
+        }
+        .copy {
+            margin-top: 1rem;
+            opacity: 0.4;
+        }
+    }
+  }

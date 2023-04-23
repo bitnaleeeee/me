@@ -3,14 +3,14 @@
   
     .inner {
         margin: 0 auto;
-        border-bottom: 1px solid #ececec;
-        padding: 15px 30px;
-        max-width: -webkit-calc(890px - (30px * 2));
+        border-bottom: 0.1rem solid #ececec;
+        padding: 0.5rem 1rem;
+        max-width: -webkit-calc(890px - (1rem * 2));
   
         .mode {
             float: left;
             border: none;
-            padding: 10px 10px;
+            padding: 0.5rem;
             background: #ccc;
         }
   
@@ -19,8 +19,16 @@
   
             &>a {
                 display: inline-block;
-                margin-left: 5px;
-                padding: 5px 10px;
+                margin-left: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+        .mode {
+            background: none;
+            cursor: pointer;
+            line {
+                stroke: #0d122b;
+                fill: #0d122b;
             }
         }
   

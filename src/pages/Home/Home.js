@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Home.scss";
@@ -23,17 +24,22 @@ const Home = () => {
 
   const setPostList = (postArr) => {
     let resultList = [];
-    postArr.forEach((item) => {
+    postArr.forEach((item, idx) => {
       console.log(item);
-
       // let date = new Date(item.querySelector("published").innerHTML);
       // let week = null;
+
+      if (idx >= 5) {
+        return false;
+      }
+
       let day = item.querySelector("published").innerHTML.slice(0, 10);
 
       resultList.push({
         title: item.querySelector("title").innerHTML,
         content: item.querySelector("content").innerHTML,
         summary: item.querySelector("summary").innerHTML,
+        name: item.querySelector("name").innerHTML,
         link: item.querySelector("link").href,
         // category: item.querySelector("category"),
         date: day,
@@ -47,10 +53,10 @@ const Home = () => {
     <div>
       <Header />
       <section className="wrapper">
-        <article className="content">
-          <div className="inner author">
+        <article className="content author">
+          <div className="inner">
             <img
-              src={process.env.PUBLIC_URL + '/images/avatar.jpg'}
+              src={process.env.PUBLIC_URL + "/images/avatar.jpg"}
               alt=""
               className="avatar"
             />
@@ -71,11 +77,11 @@ const Home = () => {
           </div>
         </article>
 
-        <article className="content">
+        <article className="content skill">
           <h2 className="title">
             Skill <span>&</span> Tool
           </h2>
-          <div className="inner skill">
+          <div className="inner">
             <dl>
               <dt>HTML5</dt>
               <dd>
@@ -121,24 +127,24 @@ const Home = () => {
           </div>
         </article>
 
-        <article className="content">
+        <article className="content project">
           <h2 className="title">
             Pro<span>ject</span>
           </h2>
-          <div className="inner project">
+          <div className="inner">
             <dl>
               <dt>
-                <img
-                  src={process.env.PUBLIC_URL + '/images/logo-onboarding.png'}
+                {/* <img
+                  src={process.env.PUBLIC_URL + "/images/logo-onboarding.png"}
                   alt="onboarding logo"
-                />
+                /> */}
                 <div className="title">
                   실시간 검색창 구축 및 AWS EC2에 JSON Server
                   배포하기(프리온보딩)
                 </div>
-                <div className="date">2022.08.12 ~ 2022.8.26</div>
               </dt>
               <dd>
+                <div className="date">2022.08.12 ~ 2022.8.26</div>
                 <div className="link">
                   <Link
                     to="https://bitnaleeeee.github.io/medical-search/"
@@ -161,7 +167,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/project-search.gif'}
+                    src={process.env.PUBLIC_URL + "/images/project-search.gif"}
                     alt="실시간 검색창 영상"
                   />
                 </div>
@@ -208,13 +214,16 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
                 <div className="title">
+                  {/* <img
+                    src={process.env.PUBLIC_URL + "/images/logo-wanted.png"}
+                    alt="wanted logo"
+                  /> */}
                   로그인 / 회원가입, TodoList 추가, 수정, 삭제 기능 구현
                 </div>
-                <div className="date">2022.10.01 ~ 2022.10.07</div>
               </dt>
               <dd>
+                <div className="date">2022.10.01 ~ 2022.10.07</div>
                 <div className="link">
                   <Link
                     to="https://bitnaleeeee.github.io/wanted-task/"
@@ -231,7 +240,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/project-todo.gif'}
+                    src={process.env.PUBLIC_URL + "/images/project-todo.gif"}
                     alt="원티드 프론트엔드코스 사전과제 영상"
                   />
                 </div>
@@ -272,12 +281,16 @@ const Home = () => {
 
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-airbnb.png'} alt="airbnb logo" />
-                <div className="title">Airbnb를 모티브로한 팀 프로젝트</div>
-                <div className="date">2022.08.29 ~ 2022.09.08</div>
-                <div className="date">주관 : 위코드 부트캠프</div>
+                <div className="title">
+                  {/* <img
+                    src={process.env.PUBLIC_URL + "/images/logo-airbnb.png"}
+                    alt="airbnb logo"
+                  /> */}
+                  Airbnb를 모티브로한 팀 프로젝트
+                </div>
               </dt>
               <dd>
+                <div className="date">2022.08.29 ~ 2022.09.08</div>
                 <div className="link">
                   <Link
                     to="https://www.youtube.com/watch?v=DWaKFjUI7Ew"
@@ -300,7 +313,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/project-wenb.gif'}
+                    src={process.env.PUBLIC_URL + "/images/project-wenb.gif"}
                     alt="wenb 프로젝트 영상"
                   />
                 </div>
@@ -342,12 +355,14 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-aesop.png'} alt="aesop logo" />
+                {/* <img
+                  src={process.env.PUBLIC_URL + "/images/logo-aesop.png"}
+                  alt="aesop logo"
+                /> */}
                 <div className="title">Aesop을 모티브로한 팀 프로젝트</div>
-                <div className="date">2022.08.12 ~ 2022.8.26</div>
-                <div className="date">주관 : 위코드 부트캠프</div>
               </dt>
               <dd>
+                <div className="date">2022.08.12 ~ 2022.8.26</div>
                 <div className="link">
                   <Link
                     to="https://www.youtube.com/watch?v=n2kL24FnHsE"
@@ -370,7 +385,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/project-usopp.gif'}
+                    src={process.env.PUBLIC_URL + "/images/project-usopp.gif"}
                     alt="우솝 프로젝트 영상"
                   />
                 </div>
@@ -414,7 +429,10 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
+                {/* <img
+                  src={process.env.PUBLIC_URL + "/images/logo-wanted.png"}
+                  alt="wanted logo"
+                /> */}
                 <div className="title">
                   깃 레포 이슈 목록과 상세 내용을 확인하는 웹 사이트 구축
                 </div>
@@ -422,10 +440,7 @@ const Home = () => {
               </dt>
               <dd>
                 <div className="link">
-                  <Link
-                    to="https://2nd-assignment.vercel.app/"
-                    target="_blank"
-                  >
+                  <Link to="https://2nd-assignment.vercel.app/" target="_blank">
                     배포 링크
                   </Link>
                   <Link
@@ -437,7 +452,7 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/project-issue.gif'}
+                    src={process.env.PUBLIC_URL + "/images/project-issue.gif"}
                     alt="원티드 프론트엔드코스 기업협업 과제"
                   />
                 </div>
@@ -475,16 +490,16 @@ const Home = () => {
             </dl>
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-wanted.png'} alt="wanted logo" />
+                {/* <img
+                  src={process.env.PUBLIC_URL + "/images/logo-wanted.png"}
+                  alt="wanted logo"
+                /> */}
                 <div className="title">B2C 차량대여 서비스 모바일 웹 제작</div>
                 <div className="date">2022.11.01 ~ 2022.11.03</div>
               </dt>
               <dd>
                 <div className="link">
-                  <Link
-                    to="https://3rd-assignment.vercel.app/"
-                    target="_blank"
-                  >
+                  <Link to="https://3rd-assignment.vercel.app/" target="_blank">
                     배포 링크
                   </Link>
                   <Link
@@ -496,7 +511,9 @@ const Home = () => {
                 </div>
                 <div className="img">
                   <img
-                    src={process.env.PUBLIC_URL + '/images/carrentalservice.gif'}
+                    src={
+                      process.env.PUBLIC_URL + "/images/carrentalservice.gif"
+                    }
                     alt="원티드 프론트엔드코스 기업협업 과제"
                   />
                 </div>
@@ -534,68 +551,122 @@ const Home = () => {
           </div>
         </article>
 
-        <article className="content">
-          <h2 className="title"><span>Time</span>line</h2>
-          <div className="inner timeline">
+        <article className="content timeline">
+          <h2 className="title">
+            <span>Time</span>line
+          </h2>
+          <div className="inner">
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-onboarding.png'} alt="onboarding logo" />
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo-onboarding.png"}
+                  alt="onboarding logo"
+                />
               </dt>
               <dd>
                 <div className="date">2022.10 - 2022.11</div>
-                <strong className="title">원티드 프론트엔드 코스<br />(Pre-onboarding)</strong>
-                <p className="text">원티드에서 주관하는 프론트엔드 코스로써 여러 IT기업의 실무 과제로 이루어졌으며 실무자/취준생 등 여러 팀원들과 같이 다양한 프로젝트를 진행하였습니다.</p>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-weggle.png'} alt="weggle logo" />
-              </dt>
-              <dd>
-                <div className="date">2022.09 - 2022.10</div>
-                <strong className="title">위글 기업 인턴십</strong>
-                <p className="text">부트캠프 기업 협업 인턴쉽으로 숏폼커머스 플랫폼 위글에서 백 오피스 프로젝트를 진행하면서 실무 로직 및 가이드를 경험하였습니다.</p>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-wecode.png'} alt="wecode logo" />
-              </dt>
-              <dd>
-                <div className="date">2022.06 ~ 2022.10</div>
-                <strong className="title">위코드 부트캠프</strong>
-                <p className="text">프론트엔드 개발자로 나아가고 다양한 프로젝트를 경험하기 위해 위코드 부트캠프를 수료하였습니다. 웹에 대한 폭넓은 학습 및 알고리즘을 학습했으며, 프론트/서버 개발자와 다양한 프로젝트를 진행하면서 많은 경험을 쌓았습니다.</p>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-codeit.png'} alt="codeit logo" />
-              </dt>
-              <dd>
-                <div className="date">2022.03 ~ 2022.06</div>
-                <strong className="title">코드잇 프론트엔드 과정</strong>
-                <p className="text">웹 개발을 본격적으로 알아가기 위해 생활코딩 강의를 시작으로 HTML, CSS, JavaScript를 학습하였으며 체계적으로 배우기위해 코드잇 프론트엔드 과정을 3개월 수강하였습니다. 단순히 학습하는것이 아닌 여러가지 UI를 구축해보면서 개발의 매력에 더욱 빠지게 되었습니다.<br /><a href="https://codepen.io/bitnaleeeee/" target="_blank" className="link">UI 보러가기</a>
+                <strong className="title">
+                  원티드 프론트엔드 코스
+                  <br />
+                  (Pre-onboarding)
+                </strong>
+                <p className="text">
+                  원티드에서 주관하는 프론트엔드 코스로써 여러 IT기업의 실무
+                  과제로 이루어졌으며 실무자/취준생 등 여러 팀원들과 같이 다양한
+                  프로젝트를 진행하였습니다.
                 </p>
               </dd>
             </dl>
             <dl>
               <dt>
-                <img src={process.env.PUBLIC_URL + '/images/logo-yogiyo.png'} alt="yogiyo logo" />
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo-weggle.png"}
+                  alt="weggle logo"
+                />
+              </dt>
+              <dd>
+                <div className="date">2022.09 - 2022.10</div>
+                <strong className="title">위글 기업 인턴십</strong>
+                <p className="text">
+                  부트캠프 기업 협업 인턴쉽으로 숏폼커머스 플랫폼 위글에서 백
+                  오피스 프로젝트를 진행하면서 실무 로직 및 가이드를
+                  경험하였습니다.
+                </p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo-wecode.png"}
+                  alt="wecode logo"
+                />
+              </dt>
+              <dd>
+                <div className="date">2022.06 ~ 2022.10</div>
+                <strong className="title">위코드 부트캠프</strong>
+                <p className="text">
+                  프론트엔드 개발자로 나아가고 다양한 프로젝트를 경험하기 위해
+                  위코드 부트캠프를 수료하였습니다. 웹에 대한 폭넓은 학습 및
+                  알고리즘을 학습했으며, 프론트/서버 개발자와 다양한 프로젝트를
+                  진행하면서 많은 경험을 쌓았습니다.
+                </p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo-codeit.png"}
+                  alt="codeit logo"
+                />
+              </dt>
+              <dd>
+                <div className="date">2022.03 ~ 2022.06</div>
+                <strong className="title">코드잇 프론트엔드 과정</strong>
+                <p className="text">
+                  웹 개발을 본격적으로 알아가기 위해 생활코딩 강의를 시작으로
+                  HTML, CSS, JavaScript를 학습하였으며 체계적으로 배우기위해
+                  코드잇 프론트엔드 과정을 3개월 수강하였습니다. 단순히
+                  학습하는것이 아닌 여러가지 UI를 구축해보면서 개발의 매력에
+                  더욱 빠지게 되었습니다.
+                  <br />
+                  <Link
+                    to="https://codepen.io/bitnaleeeee/"
+                    target="_blank"
+                    className="link"
+                  >
+                    UI 보러가기
+                  </Link>
+                </p>
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                <img
+                  src={process.env.PUBLIC_URL + "/images/logo-yogiyo.png"}
+                  alt="yogiyo logo"
+                />
               </dt>
               <dd>
                 <div className="date">2018.02 ~ 2022.02</div>
-                <strong className="title">위대한상상<span className="dot">·</span>경희대학교<span className="dot">·</span>화성고등학교</strong>
-                <p className="text">인사, HRD 업무 담당하였으며 위대한상상 IT부서에서 일하면서 웹 개발에 대한 큰 관심이 생겼고 이때부터 개발자의 커리어 전환에 도전하게 되었습니다.</p>
+                <strong className="title">
+                  위대한상상<span className="dot">·</span>경희대학교
+                  <span className="dot">·</span>화성고등학교
+                </strong>
+                <p className="text">
+                  인사, HRD 업무 담당하였으며 위대한상상 IT부서에서 일하면서 웹
+                  개발에 대한 큰 관심이 생겼고 이때부터 개발자의 커리어 전환에
+                  도전하게 되었습니다.
+                </p>
               </dd>
             </dl>
           </div>
         </article>
 
-
-
-        <article className="content">
-          <h2 className="title"><span>Recent</span> Posts</h2>
-          <div className="inner post">
+        <article className="content post">
+          <h2 className="title">
+            <span>Recent</span> Posts
+          </h2>
+          <div className="inner">
             <ul className="post-list">
               {post &&
                 post.map((item, idx) => {
@@ -604,6 +675,7 @@ const Home = () => {
                       <Link className="link" to={item.link} target="_blank">
                         <div className="top">
                           <strong className="title">{item.title}</strong>
+                          <span className="name">{item.name}</span>
                           <span className="date">{item.date}</span>
                         </div>
                         <div className="bottom">{item.summary}</div>
@@ -615,6 +687,7 @@ const Home = () => {
           </div>
         </article>
       </section>
+      <Footer />
     </div>
   );
 };
