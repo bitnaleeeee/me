@@ -3,9 +3,9 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./Archive.scss";
+import "./Post.scss";
 
-const Archive = () => {
+const Post = () => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -25,12 +25,11 @@ const Archive = () => {
   const setPostList = (postArr) => {
     let resultList = [];
     postArr.forEach((item, idx) => {
-      if (idx >= 20) {
+      if (idx >= 10) {
         return false;
       }
 
       let day = item.querySelector("published").innerHTML.slice(0, 10);
-
       resultList.push({
         title: item.querySelector("title").innerHTML,
         content: item.querySelector("content").innerHTML,
@@ -41,7 +40,6 @@ const Archive = () => {
         date: day,
       });
     });
-    console.log(resultList);
     setPost(resultList);
   };
 
@@ -51,9 +49,8 @@ const Archive = () => {
       <section className="wrapper">
         <article className="content post">
           <h2 className="title">
-            <span>Ar</span>chive
+            <span>P</span>ost
           </h2>
-
           <div className="inner">
             <ul className="post-list">
               {post &&
@@ -72,11 +69,15 @@ const Archive = () => {
                   );
                 })}
             </ul>
+            <div className="post-btn" >
+              <Link to="https://bitnalee.dev/archive/" target="_blank">More</Link>
+            </div>
           </div>
         </article>
       </section>
+      <Footer />
     </div>
   );
 };
 
-export default Archive;
+export default Post;

@@ -14,8 +14,14 @@
   
         a {
             display: inline-block;
-            margin-top: 1rem;
-            color: #ED812E;
+            margin: 1.5rem 0.5rem 0;
+            border: 0.1rem solid #e0e0e0;
+            width: 4rem;
+            height: 2rem;
+            border-radius: 2rem;
+            line-height: 2rem;
+            ;
+            color: #333;
         }
     }
   }
@@ -37,6 +43,11 @@
   
             &:nth-child(2n) {
                 padding-left: 10%;
+            }
+  
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-top: 0;
             }
         }
   
@@ -94,9 +105,16 @@
             &:nth-child(2n) {
                 padding-left: 10%;
             }
+  
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+  
             dt {
                 position: relative;
                 font-weight: bold;
+  
                 img {
                     position: absolute;
                     top: 50%;
@@ -105,6 +123,7 @@
                     height: 1rem;
                 }
             }
+  
             .title {
                 // padding-left: 3rem;
                 font-size: 1.2rem;
@@ -149,9 +168,11 @@
   
                 margin-top: 0.5rem;
                 font-size: 1rem;
+  
                 strong {
                     font-weight: bold;
                 }
+  
                 p {
                     margin: 0;
                 }
@@ -286,6 +307,10 @@
                 display: block;
                 clear: both;
             }
+  
+            &:nth-child(1) {
+                margin-top: 0;
+            }
         }
   
         &>dl:nth-child(2n) dd {
@@ -310,6 +335,7 @@
   
                 .top {
                     position: relative;
+  
                     .title {
                         font-weight: bold;
                         font-size: 1.2rem;
@@ -343,7 +369,43 @@
                     border-bottom: none;
                 }
             }
-            
+  
+        }
+    }
+  }
+  
+  @media (max-width: 640px) {
+  
+    .skill {
+        .inner {
+            &>dl {
+                width: 100%;
+  
+                &:nth-child(2n) {
+                    padding-left: 0;
+                }
+  
+                &:nth-child(2) {
+                    margin-top: 3rem;
+                }
+            }
+  
+        }
+    }
+  
+  
+    .project {
+        .inner {
+            font-size: 0;
+            &>dl {
+                width: 100%;
+                &:nth-child(2n) {
+                    padding-left: 0;
+                }
+                &:nth-child(2) {
+                    margin-top: 3rem;
+                }
+            }
         }
     }
   }

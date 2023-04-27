@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Archive from "./pages/Archive/Archive";
+import Post from "./pages/Post/Post";
 import About from "./pages/About/About";
 
 const Router = () => {
@@ -9,7 +9,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/me" element={<Home />} />
-        <Route path="/me/Archive" element={<Archive />} />
+        <Route path="/me/Post" element={<Post />} />
         <Route path="/me/About" element={<About />} />
       </Routes>
     </BrowserRouter>

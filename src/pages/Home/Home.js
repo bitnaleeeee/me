@@ -70,9 +70,8 @@ const Home = () => {
               <br /> 유연한 소통이 가능하며 다양한 접근방법으로 문제 해결에
               노력합니다
               <br />
-              <Link to="https://github.com/bitnaleeeee" target="_blank">
-                Github
-              </Link>
+              <Link to="https://github.com/bitnaleeeee" target="_blank">GitHub</Link>
+              <Link to="https://bitnalee.dev" target="_blank">Blog</Link>
             </p>
           </div>
         </article>

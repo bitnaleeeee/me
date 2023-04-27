@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="inner">
-        <button type="button" className="mode">
+        <Link to="/me" className="mode">
           <svg
             className="mode-moon"
             xmlns="http://www.w3.org/2000/svg"
@@ -114,12 +114,13 @@ const Header = () => {
               }}
             />
           </svg>
-        </button>
+        </Link>
+
         <nav className="nav">
           <Link to="/me">Home</Link>
-          <Link to="/me/Archive">Archive</Link>
+          <Link to="/me/Post">Post</Link>
           <Link to="/me/About">About</Link>
-          <Link to="/me">
+          {/* <Link to="/me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
@@ -132,7 +133,7 @@ const Header = () => {
               <path d="M48,186.67v86.55c52,0,101.94,15.39,138.67,52.11s52,86.56,52,138.67h86.66C325.33,312.44,199.67,186.67,48,186.67Z"></path>
               <path d="M48,48v86.56c185.25,0,329.22,144.08,329.22,329.44H464C464,234.66,277.67,48,48,48Z"></path>
             </svg>
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>
@@ -140,4 +141,3 @@ const Header = () => {
 };
 
 export default Header;
-
