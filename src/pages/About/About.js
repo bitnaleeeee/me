@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <section className="wrapper">
         <article className="content about">
-          <h2 className="title">Ab<span>ou</span>t</h2>
+          <h2 className="title">About</h2>
           <div className="inner">
             <dl>
                 <dt>

@@ -49,7 +49,7 @@ const Post = () => {
       <section className="wrapper">
         <article className="content post">
           <h2 className="title">
-            <span>P</span>ost
+            Post
           </h2>
           <div className="inner">
             <ul className="post-list">

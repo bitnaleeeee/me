@@ -61,7 +61,7 @@ const Home = () => {
               className="avatar"
             />
             <h2 className="title">
-              Bitna <span>Lee</span>
+              Bitna Lee
             </h2>
             <p className="info">
               사용자 관점에서 고민하고 꾸준히 노력하는 프론트엔드 개발자 입니다
@@ -78,7 +78,7 @@ const Home = () => {
 
         <article className="content skill">
           <h2 className="title">
-            Skill <span>&</span> Tool
+            Skill & Tool
           </h2>
           <div className="inner">
             <dl>
@@ -128,7 +128,7 @@ const Home = () => {
 
         <article className="content project">
           <h2 className="title">
-            Pro<span>ject</span>
+            Project
           </h2>
           <div className="inner">
             <dl>
@@ -552,7 +552,7 @@ const Home = () => {
 
         <article className="content timeline">
           <h2 className="title">
-            <span>Time</span>line
+            Timeline
           </h2>
           <div className="inner">
             <dl>
@@ -663,7 +663,7 @@ const Home = () => {
 
         <article className="content post">
           <h2 className="title">
-            <span>Recent</span> Posts
+            Recent Posts
           </h2>
           <div className="inner">
             <ul className="post-list">
