@@ -14,7 +14,7 @@ const About = () => {
           <div className="inner">
             <dl>
                 <dt>
-                    <img src="https://bitnalee.dev/assets/img/icon-lego.png" alt="" />
+                    <img src={process.env.PUBLIC_URL + "/images/icon-lego.png"} alt="" />
                     <h3>개발에 중독되기</h3>
                 </dt>
                 <dd>
@@ -25,7 +25,7 @@ const About = () => {
             </dl>
             <dl>
                 <dt>
-                    <img src="https://bitnalee.dev/assets/img/icon-sponge.png" alt="" />
+                    <img src={process.env.PUBLIC_URL + "/images/icon-sponge.png"} alt="" />
                     <h3>흡수하고 공유하기</h3>
                 </dt>
                 <dd>
@@ -36,7 +36,7 @@ const About = () => {
             </dl>
             <dl>
                 <dt>
-                    <img src="https://bitnalee.dev/assets/img/icon-pen.png" alt="" />
+                    <img src={process.env.PUBLIC_URL + "/images/icon-pen.png"} alt="" />
                     <h3>성장하며 기록하기</h3>
                 </dt>
                 <dd>
