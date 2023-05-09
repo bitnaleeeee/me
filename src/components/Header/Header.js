@@ -118,8 +118,8 @@ const Header = () => {
 
         <nav className="nav">
           <Link to="/me">Home</Link>
-          <Link to="/me/Post">Post</Link>
-          <Link to="/me/About">About</Link>
+          <Link to="/me/post">Post</Link>
+          <Link to="/me/about">About</Link>
           {/* <Link to="/me">
             <svg
               xmlns="http://www.w3.org/2000/svg"
