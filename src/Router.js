@@ -6,11 +6,11 @@ import About from "./pages/About/About";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/me">
       <Routes>
-        <Route path="/me" element={<Home />} />
-        <Route path="/me/post" element={<Post />} />
-        <Route path="/me/about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/post" element={<Post />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
